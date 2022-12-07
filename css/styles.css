@@ -43,7 +43,7 @@ body {
 /* estilos general*/
 
 body{
-    background-color:rgb(14, 1, 1);
+    background-color:#000000(14, 1, 1);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
@@ -194,4 +194,13 @@ main .p-dos{
 .iglogo{
   position: relative;
   left: 150px;
+}
+
+
+.imgbanner{
+    height: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
