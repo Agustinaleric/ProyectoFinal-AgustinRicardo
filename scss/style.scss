@@ -1,184 +1,98 @@
-// hojas secundarias
-
-@import "variables.scss";
-@import "resets.scss";
+$color_1: white;
+$color_2: #51ff00;
+$color_3: whitesmoke;
+$color_4: #b60c45;
+$font-family_1: Arial, Helvetica, sans-serif;
+$font-family_2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$background-color_1: black (14, 1, 1);
+$background-color_2: #000000;
+$background-color_3: rgb(0, 0, 0);
 
 /* Styles general*/
+/* Styles header*/
+/*Styles main*/
+/* section styles*/
+/*mq*/
+/*styles header*/
+/* Section styles */
+/* Styles main*/
+/* Social Network styles*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-family_1;
     background: $colorbackground;
+    background-color: $background-color_1;
+    font-family: $font-family_2;
 }
 
 .menu {
     list-style: none;
     padding: 0;
-    background: $colorbackground (0, 0, 0);
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-}
+    background: $colorbackground (
+        0,
+        0,
+        0
+    );
+width: 90%;
+max-width: 1000px;
+margin: auto;
 
+li {
+    a {
+        text-decoration: none;
+        color: $color_1;
+        padding: 20px;
+        display: block;
 
-.menu li a {
-    text-decoration: none;
-    color: white;
-    padding: 20px;
-    display: block;
-}
+        &:hover {
+            background: rgb(3, 211, 13);
+        }
+    }
 
-
-.menu li {
     display: inline-block;
     text-align: end;
-
 }
-
-.menu li a:hover {
-    background: rgb(3, 211, 13)
 }
-
-
-
-body {
-    background-color: black (14, 1, 1);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
-
-/* Styles header*/
 
 header {
-    display: none
+    display: none;
 }
-
-/*Styles main*/
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
+
+    h2 {
+        color: $color_2;
+        text-align: center;
+
+        span {
+            display: block;
+        }
+    }
+
+    p {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .boton {
+        background-color: $background-color_2;
+        color: $color_3;
+        padding: 0.7rem;
+        box-shadow: 1px 1px 5px black;
+        text-shadow: 1px 1px 5px black;
+    }
+
+    img {
+        width: 70%;
+    }
 }
-
-main h2 {
-    color: #51ff00;
-    text-align: center;
-}
-
-main h2 span {
-    display: block;
-}
-
-main p {
-    padding: 1rem;
-    text-align: center;
-}
-
-
-main .boton {
-    background-color: #000000;
-    color: whitesmoke;
-    padding: 0.7rem;
-    box-shadow: 1px 1px 5px black;
-    text-shadow: 1px 1px 5px black;
-
-}
-
-main img {
-    width: 70%;
-
-}
-
-  main {
-      padding: 2rem;
-  }
-/* section styles*/
-
 
 section {
     display: none;
 }
-
-/*mq*/
-
-@media screen and (min-width:768px) {
-    /*styles header*/
-
-    header {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #b60c45;
-    }
-
-    header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1.3rem;
-    }
-
-
-  
-    /* Section styles */
-
-    section {
-        display: block;
-        display: flex;
-        background-color: rgb(0, 0, 0);
-    }
-
-    section div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    section div img {
-        width: 20%;
-    }
-
-    section div p {
-        text-align: center;
-    }
-}
-
-@media screen and (min-width:1024px) {
-    /* Styles main*/
-
-    main {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "p img"
-            "h2 img"
-            "p-dos img"
-            "boton img";
-        justify-items: center;
-    }
-
-    main p {
-        grid-area: p;
-    }
-
-    main h2 {
-        grid-area: h2;
-    }
-
-    main .p-dos {
-        grid-area: p-dos;
-    }
-
-    main .boton {
-        grid-area: boton;
-    }
-
-    main img {
-        grid-area: img;
-    }
-}
-
-/* Social Network styles*/
 
 .soundcloudlogo {
     display: flex;
@@ -190,7 +104,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .iglogo {
@@ -198,11 +111,79 @@ section {
     left: 150px;
 }
 
-
 .imgbanner {
     height: 300%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+@media screen and (min-width:768px) {
+    header {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color_4;
+
+        nav {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 1.3rem;
+            }
+        }
+    }
+
+    section {
+        display: block;
+        display: flex;
+        background-color: $background-color_3;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+
+            img {
+                width: 20%;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "p img" "h2 img" "p-dos img" "boton img";
+        justify-items: center;
+
+        p {
+            grid-area: p;
+        }
+
+        h2 {
+            grid-area: h2;
+        }
+
+        .p-dos {
+            grid-area: p-dos;
+        }
+
+        .boton {
+            grid-area: boton;
+        }
+
+        img {
+            grid-area: img;
+        }
+    }
 }
