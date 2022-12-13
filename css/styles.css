@@ -106,7 +106,10 @@ section {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "p img" "h2 img" "p-dos img" "boton img";
+    grid-template-areas: "p img"
+ "h2 img"
+ "p-dos img"
+ "boton img";
     justify-items: center; }
   main p {
     grid-area: p; }
@@ -134,9 +137,11 @@ section {
   position: relative;
   left: 150px; }
 
-.imgbanner {
-  height: 300%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
+
+.bannerone {
+    height: 400px;
+    background-image: url(../img/icedropsmob.jpg);
+    background-repeat: no-repeat;
+background-position: center;
+  }
+   
