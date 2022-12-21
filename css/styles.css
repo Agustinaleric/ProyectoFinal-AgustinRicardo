@@ -98,7 +98,14 @@ section {
   section div img {
     width: 20%; }
   section div p {
-    text-align: center; } }
+    text-align: center; } 
+    .bannerone {
+      height: 400px;
+      background-image: url(../img/icedropsmob.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 
 @media screen and (min-width: 1024px) {
   /* Styles main*/
@@ -120,7 +127,14 @@ section {
   main .boton {
     grid-area: boton; }
   main img {
-    grid-area: img; } }
+    grid-area: img; } 
+    .bannerone {
+      height: 400px;
+      background-image: url(../img/icedropsmob.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 
 /* Social Network styles*/
 .soundcloudlogo {
